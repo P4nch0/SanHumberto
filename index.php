@@ -1,13 +1,7 @@
-<?php
-require_once('connection.php');
+<?php 
+	include_once("controller/Controller.php");
 
-  if (isset($_GET['controller']) && isset($_GET['action'])) {
-    $controller = $_GET['controller'];
-    $action     = $_GET['action'];
-  } else {
-    $controller = 'pages';
-    $action     = 'home';
-  }
+	$controller = new Controller();
+	$controller->invoke();
 
-  require_once('Views/layout.php');
 ?>
