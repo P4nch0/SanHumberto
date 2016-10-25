@@ -7,7 +7,7 @@ class Cow {
 	
 	public function __construct($title, $author, $description)  
     {  
-        $this->title = $title;
+        $this->id = id;
 	    $this->author = $author;
 	    $this->description = $description;
     } 
