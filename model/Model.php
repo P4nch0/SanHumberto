@@ -1,24 +1,24 @@
 <?php
 
-include_once("model/Book.php");
+include_once("model/Cow.php");
 
 class Model {
-	public function getBookList()
+	public function getCowList()
 	{
 		// here goes some hardcoded values to simulate the database
 		return array(
-			"Jungle Book" => new Book("Jungle Book", "R. Kipling", "A classic book."),
-			"Moonwalker" => new Book("Moonwalker", "J. Walker", ""),
-			"PHP for Dummies" => new Book("PHP for Dummies", "Some Smart Guy", "")
+			"Jungle Book" => new Cow("Jungle Book", "R. Kipling", "A classic book."),
+			"Moonwalker" => new Cow("Moonwalker", "J. Walker", ""),
+			"PHP for Dummies" => new Cow("PHP for Dummies", "Some Smart Guy", "")
 		);
 	}
 	
-	public function getBook($title)
+	public function getCow($title)
 	{
 		// we use the previous function to get all the books and then we return the requested one.
 		// in a real life scenario this will be done through a db select command
-		$allBooks = $this->getBookList();
-		return $allBooks[$title];
+		$allCows = $this->getCowList();
+		return $allCows[$title];
 	}
 	
 	

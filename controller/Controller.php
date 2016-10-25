@@ -12,17 +12,17 @@ class Controller {
 	
 	public function invoke()
 	{
-		if (!isset($_GET['book']))
+		if (!isset($_GET['cow']))
 		{
 			// no special book is requested, we'll show a list of all available books
-			$books = $this->model->getBookList();
-			include 'view/booklist.php';
+			$cows = $this->model->getCowList();
+			include 'view/cowlist.php';
 		}
 		else
 		{
 			// show the requested book
-			$book = $this->model->getBook($_GET['book']);
-			include 'view/viewbook.php';
+			$cow = $this->model->getCow($_GET['cow']);
+			include 'view/viewcow.php';
 		}
 	}
 }

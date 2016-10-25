@@ -1,6 +1,6 @@
 <?php
 
-class Book {
+class Cow {
 	public $title;
 	public $author;
 	public $description;
