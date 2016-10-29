@@ -41,6 +41,7 @@
                 <li>
                     <a href="index.php">Becerritas</a>
                 </li>
+<!--
                 <li>
                     <a href="vaccine.php">Vacunas</a>
                 </li>
@@ -53,9 +54,11 @@
                 <li>
                     <a href="desp.php">Desparacitaciones</a>
                 </li>
+-->
                 <li>
                     <a href="view/newcow.php">Nueva Becerra</a>
                 </li>
+<!--
                 <li>
                     <a href="view/newvaccine.php">Nueva Vacuna</a>
                 </li>
@@ -67,6 +70,7 @@
                 </li>
                 <li>
                     <a href="view/newdesp.php">Nueva Desparacitacion</a>
+-->
                 </li>
             </ul>
         </div>
