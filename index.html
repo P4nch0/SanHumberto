@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>San Humberto</title>
+    <title>Simple Sidebar - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,41 +34,31 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="index.php">
-                        Control Becerritas
+                    <a href="#">
+                        Start Bootstrap
                     </a>
                 </li>
                 <li>
-                    <a href="index.php">Becerritas</a>
+                    <a href="#">Dashboard</a>
                 </li>
                 <li>
-                    <a href="vaccine.php">Vacunas</a>
+                    <a href="#">Shortcuts</a>
                 </li>
                 <li>
-                    <a href="treatment.php">Tratamientos</a>
+                    <a href="#">Overview</a>
                 </li>
                 <li>
-                    <a href="rep.php">Reproducciones</a>
+                    <a href="#">Events</a>
                 </li>
                 <li>
-                    <a href="desp.php">Desparacitaciones</a>
+                    <a href="#">About</a>
                 </li>
                 <li>
-                    <a href="view/newcow.php">Nueva Becerra</a>
+                    <a href="#">Services</a>
                 </li>
                 <li>
-                    <a href="view/newvaccine.php">Nueva Vacuna</a>
+                    <a href="#">Contact</a>
                 </li>
-                <li>
-                    <a href="view/newtreat.php">Nuevo Tratamiento</a>
-                </li>
-                <li>
-                    <a href="view/newrep.php">Nueva Reproduccion</a>
-                </li>
-                <li>
-                    <a href="view/newdesp.php">Nueva Desparacitacion</a>
-                </li>
-            </ul>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -78,17 +68,10 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Becerritas</h1>
-                        <p>
-                        
-                            <?php 
-                                include_once("controller/Controller.php");
-
-                                $controller = new Controller();
-                                $controller->becerras();
-                            ?>
-                            
-                        </p>
+                        <h1>Simple Sidebar</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
                 </div>
             </div>
@@ -104,6 +87,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 </body>
 

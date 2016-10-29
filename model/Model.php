@@ -8,42 +8,102 @@
     mysql_connect($hostname, $username, $password) or die ("<html><script language='Javascript'>alert('nope')</script></html>");
     mysql_select_db($database);
 
-include_once("model/Cow.php");
 
 class Model {
-	public function getCowList()
-	{
+	public function getCowList() {
 
-    $query = "SELECT * FROM VACAS";
-    
-    $result = mysql_query($query);
+        $query = "SELECT * FROM VACAS";
+        $calves = array();
+        $result = mysql_query($query);
 
-    if($result) {
-        
-        // here goes some hardcoded values to simulate the database
-		return array(
-			"Jungle Book" => new Cow("Jungle Book", "R. Kipling", "A classic book."),
-			"Moonwalker" => new Cow("Moonwalker", "J. Walker", ""),
-			"PHP for Dummies" => new Cow("PHP for Dummies", "Some Smart Guy", "")
-		);
-        
-        
-        while($row = ) {
-            $id = $row["ID_PLASTICO"];
-            echo "ID: ".$id."<br/>";
+        if($result) {
+
+            // here we obtain the cows from the database as a list and create the object
+            while($row = mysql_fetch_array($result)) {
+                $calves[] = $row;
+            }
+
+            return array ($calves);
+
         }
-    }
 		
 	}
 	
-	public function getCow($title)
-	{
-		// we use the previous function to get all the books and then we return the requested one.
-		// in a real life scenario this will be done through a db select command
-		$allCows = $this->getCowList();
-		return $allCows[$title];
+	public function getTreatList() {
+
+        $query = "SELECT * FROM TRATAMIENTOS";
+        $calves = array();
+        $result = mysql_query($query);
+
+        if($result) {
+
+            // here we obtain the cows from the database as a list and create the object
+            while($row = mysql_fetch_array($result)) {
+                $calves[] = $row;
+            }
+
+            return array ($calves);
+
+        }
+		
 	}
 	
+    public function getVacList() {
+
+        $query = "SELECT * FROM VACUNAS";
+        $calves = array();
+        $result = mysql_query($query);
+
+        if($result) {
+
+            // here we obtain the cows from the database as a list and create the object
+            while($row = mysql_fetch_array($result)) {
+                $calves[] = $row;
+            }
+
+            return array ($calves);
+
+        }
+		
+	}
+    
+    public function getDespList() {
+
+        $query = "SELECT * FROM DESPARACITACION";
+        $calves = array();
+        $result = mysql_query($query);
+
+        if($result) {
+
+            // here we obtain the cows from the database as a list and create the object
+            while($row = mysql_fetch_array($result)) {
+                $calves[] = $row;
+            }
+
+            return array ($calves);
+
+        }
+		
+	}
+    
+	public function getRepList() {
+
+        $query = "SELECT * FROM REPRODUCCION";
+        $calves = array();
+        $result = mysql_query($query);
+
+        if($result) {
+
+            // here we obtain the cows from the database as a list and create the object
+            while($row = mysql_fetch_array($result)) {
+                $calves[] = $row;
+            }
+
+            return array ($calves);
+
+        }
+		
+	}
 	
 }
 

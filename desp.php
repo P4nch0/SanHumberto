@@ -69,7 +69,6 @@
                     <a href="view/newdesp.php">Nueva Desparacitacion</a>
                 </li>
             </ul>
-            </ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
@@ -85,7 +84,7 @@
                                 include_once("controller/Controller.php");
 
                                 $controller = new Controller();
-                                $controller->becerras();
+                                $controller->desparacitaciones();
                             ?>
                             
                         </p>
