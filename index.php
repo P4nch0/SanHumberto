@@ -4,4 +4,6 @@
 	$controller = new Controller();
 	$controller->invoke();
 
+//include("connection.php")
+
 ?>
